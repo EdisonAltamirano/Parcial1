@@ -21,7 +21,17 @@ Funciones 1 -  Crea una funcion llamada "mayusculas" que:
 
 // CREA TU FUNCION MAYUSCULAS aqui:
 
-
+function mayusculas(nombres){
+    console.log("FUNCION MAYUSCULAS")
+    let newarray = []
+    nombres.forEach(element => {
+        newarray.push(element.toUpperCase())
+    });    
+    newarray.reverse()
+    newarray.forEach(element => {
+        console.log(element)
+    }); 
+}
 
 
 /*
@@ -36,7 +46,10 @@ Funciones 2 -  Crea una funcion llamada "calculateDogAge" que:
 
 // CREA TU FUNCION calculateDogAge aqui:
 
-
+function calculateDogAge(params) {
+    console.log("FUNCION calculateDogAge")
+    console.log(`Tu perro tiene ${params*7} años perro`)
+}
 
 
 
@@ -53,7 +66,6 @@ A) Define un objeto tipo "Perro" que reciba 3 parametros
 2) Color
 3) Raza
 
-
 B) Crea 3 objectos  con diferentes valores.
 
 C) Con un console.log escribe el nombre del primer objeto, el color del segundo, y la raza del tercero. Lo puedes hacer en una sola línea o en 3 lineas aparte. 
@@ -61,14 +73,21 @@ C) Con un console.log escribe el nombre del primer objeto, el color del segundo,
 
 */
 
+function Dog(nombre,color,raza){
+    this.nombre=nombre,
+    this.color=color,
+    this.raza=raza
+}
 
+perro1 = new Dog("Lucky","negro","beagle");
+perro2 = new Dog("Lucky2","blanco","cocker");
+perro3 = new Dog("Lucky3","cafe","chihuahua");
 
 /***
  * 
  *        PRUEBA TUS FUNCIONES
  * 
  ***/
-
 
 mayusculas(nombres);
 calculateDogAge(4);
@@ -81,7 +100,9 @@ calculateDogAge(4);
  *        PRUEBA TUS OBJETOS AQUI
  * 
  ***/
-
+console.log("Nombre de perro1: " + perro1.nombre);
+console.log("Color de perro2: " + perro2.color);
+console.log("Raza de perro3: " + perro2.raza);
 
 </script>
 
